@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0;background-color:#f1f1f1f1;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: white;
+  width: 40%
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+    background-color: #b1dae7;
+    
+}
+.cta {
+ position: relative;
+ margin: auto;
+ padding: 12px 18px;
+ transition: all 0.2s ease;
+ border: none;
+ background: none;
+}
+
+.cta:before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ display: block;
+ border-radius: 50px;
+ background: #b1dae7;
+ width: 45px;
+ height: 45px;
+ transition: all 0.3s ease;
+}
+
+.cta span {
+ position: relative;
+ font-family: "Ubuntu", sans-serif;
+ font-size: 18px;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ color: #234567;
+}
+
+.cta svg {
+ position: relative;
+ top: 0;
+ margin-left: 10px;
+ fill: none;
+ stroke-linecap: round;
+ stroke-linejoin: round;
+ stroke: #234567;
+ stroke-width: 2;
+ transform: translateX(-5px);
+ transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+ width: 100%;
+ background: #b1dae7;
+}
+
+.cta:hover svg {
+ transform: translateX(0);
+}
+
+.cta:active {
+ transform: scale(0.95);
+}
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: #b1dae7;}
+
+.radio-box{
+    width: 300px;
+    padding: 10px;
+    border:1px solid black;
+    margin: 0;
+    text-align: left;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+    <p>How Disappointed would you be if you could no longer use APP Name?</p>
+    <p style="color:#b1dae7 ;">This will help us improve your experience</p> <br>
+
+    <div class="radio-box">
+        <input type="radio">Very Disappointed
+    </div>
+<br>
+    <div class="radio-box">
+        <input type="radio">Somewhat Disappointed
+    </div>
+<br>
+    <div class="radio-box">
+        <input type="radio">Not Disappointed
+    </div>
+
+
+<br><br>
+  <button class="cta" onclick="plusSlides(1)">
+
+    <span>Next</span>
+  <svg width="15px" height="10px" viewBox="0 0 13 10">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</button>
+</div>
+
+<div class="mySlides">
+  <p>How Could "App Name" be improved to better meet your needs?</p>
+  <p style="color:#b1dae7 ;">
+    This will help us improve your experience
+  </p>
+
+  <p>
+    <input style="width: 70%;height: 100px;" type="textbox" name="" id="">
+</p>
+
+
+<button style="display: block; margin-left: 18.6rem; border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;" class="button2">Share Audio  <i class="fa fa-microphone"></i></button>
+<br><br><br>
+  <button class="cta" onclick="plusSlides(1)">
+
+    <span>Next</span>
+  <svg width="15px" height="10px" viewBox="0 0 13 10">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</button>
+</div>
+
+<div class="mySlides">
+  <p>How could "App Name" be improved to better meet your needs?</p>
+  <p style="color:#b1dae7 ;">
+    This will help us improve your experience
+  </p>
+  <p>
+    <input style="width: 70%;height: 100px;" type="textbox" name="" id="">
+</p>
+
+
+<button style="display: block; margin-left: 18.6rem; border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;" class="button2">Share Audio  <i class="fa fa-microphone"></i></button>
+<br><br><br>
+
+
+  <p class="author">- Thomas A. Edison</p>
+  <button class="cta" onclick="plusSlides(1)">
+
+    <span>Finish</span>
+  <svg width="15px" height="10px" viewBox="0 0 13 10">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</button>
+</div>
+
+
+<hr style="background-color:black; color:black">
+
+
+
+<div class="dot-container">
+
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
