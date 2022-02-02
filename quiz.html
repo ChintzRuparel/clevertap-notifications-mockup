@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIZ</title>
-
-    <style>
-        
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>QUIZ</title>
+	<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
 *{
   box-sizing: border-box;
 }
 body{
-  background-color: #b8c6db;
+  background-color: white;
   font-family: 'Poppins', sans-serif;
   display: flex;
   overflow: hidden;
@@ -23,18 +17,17 @@ body{
 .quiz-container{
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
-  width: 500px;
+  width: 100%;
   overflow: hidden;
   height: 70%;
-  margin: 2rem;
+
 }
 .quiz-header{
-  padding: 4rem;
+  padding:3rem;
 }
 h2{
   padding: 1rem;
-  text-align: center;
+  text-align: left;
   margin: 0;
 }
 
@@ -67,41 +60,90 @@ button:focus{
   outline: none;
   background-color: #44b927;
 }
-    </style>
+      
+      /* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+	</style>
 </head>
 <body>
+<div class="quiz-container" id="quiz">
+<div class="quiz-header">
+<h2 id="question">Question Text</h2>
 
-    <div class="quiz-container" id="quiz">
-        <div class="quiz-header">
-          <h2 id="question">Question Text</h2>
-          <ul>
-            <li>
-              <input type="radio" name="answer" id="a" class="answer">
-              <label for="a" id="a_text">Answer</label>
-            </li>
-    
-            <li>
-              <input type="radio" name="answer" id="b" class="answer">
-              <label for="b" id="b_text">Answer</label>
-            </li>
-    
-            <li>
-              <input type="radio" name="answer" id="c" class="answer">
-              <label for="c" id="c_text">Answer</label>
-            </li>
-    
-            <li>
-              <input type="radio" name="answer" id="d" class="answer">
-              <label for="d" id="d_text">Answer</label>
-            </li>
-    
-          </ul>
-        </div>
-    
-        <button id="submit">Submit</button>
-    
-      </div>
-    <script>
+<ul>
+	<li><input class="answer" id="a" name="answer" type="checkbox" /> <label for="a" id="a_text">Answer</label></li>
+	<li><input class="answer" id="b" name="answer" type="checkbox" /> <label for="b" id="b_text">Answer</label></li>
+	<li><input class="answer" id="c" name="answer" type="checkbox" /> <label for="c" id="c_text">Answer</label></li>
+	<li><input class="answer" id="d" name="answer" type="checkbox" /> <label for="d" id="d_text">Answer</label></li>
+</ul>
+</div>
+<button id="submit">Submit</button></div>
+<script>
         const quizData = [
     {
         question: "Which language runs in a web browser?",
@@ -124,7 +166,7 @@ button:focus{
         a: "Hypertext Markup Language",
         b: "Hypertext Markdown Language",
         c: "Hyperloop Machine Language",
-        d: "Helicopters Terminals Motorboats Lamborginis",
+        d: "Hypo texts marquee lang",
         correct: "a",
     },
     {
@@ -205,8 +247,5 @@ submitBtn.addEventListener('click', () => {
 
 
 
-    </script>
-
-</body>
-
+    </script></body>
 </html>
