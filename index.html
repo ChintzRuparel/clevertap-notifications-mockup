@@ -13,19 +13,19 @@ body {font-family: Verdana, sans-serif; margin:0;background-color:#f1f1f1f1;}
 .slideshow-container {
   position: relative;
   background: white;
-  width: 40%
+  width: 100%
 }
 
 /* Slides */
 .mySlides {
   display: none;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
 }
 
 /* The dot/bullet/indicator container */
 .dot-container {
-    text-align: center;
+    text-align: left;
     padding: 20px;
     background: white;
 }
@@ -115,6 +115,7 @@ q {font-style: italic;}
     border:1px solid black;
     margin: 0;
     text-align: left;
+    border-radius: 20px;
 }
 
 .button2:hover {
@@ -127,32 +128,35 @@ q {font-style: italic;}
 <div class="slideshow-container">
 
 <div class="mySlides">
+    <form method="POST" data-netlify="true">    
     <p>How Disappointed would you be if you could no longer use APP Name?</p>
-    <p style="color:#b1dae7 ;">This will help us improve your experience</p> <br>
+    <p><i>This will help us improve your experience</i></p> <br>
 
     <div class="radio-box">
-        <input type="radio">Very Disappointed
+        <input onclick="plusSlides(1)" type="radio" id="verydisappointed" name="result" >Very Disappointed
     </div>
 <br>
     <div class="radio-box">
-        <input type="radio">Somewhat Disappointed
+        <input onclick="plusSlides(1)" type="radio" id="somewhatdisappointed" name="result">Somewhat Disappointed
     </div>
 <br>
     <div class="radio-box">
-        <input type="radio">Not Disappointed
+        <input onclick="plusSlides(1)" type="radio" id="notdisappointed" name="result">Not Disappointed
     </div>
 
+</form>
 
-<br><br>
-  <button class="cta" onclick="plusSlides(1)">
+  <!-- <button class="cta" onclick="plusSlides(1)">
 
     <span>Next</span>
   <svg width="15px" height="10px" viewBox="0 0 13 10">
     <path d="M1,5 L11,5"></path>
     <polyline points="8 1 12 5 8 9"></polyline>
   </svg>
-</button>
+</button> -->
 </div>
+
+
 
 <div class="mySlides">
   <p>How Could "App Name" be improved to better meet your needs?</p>
@@ -161,7 +165,8 @@ q {font-style: italic;}
   </p>
 
   <p>
-    <input style="width: 70%;height: 100px;" type="textbox" name="" id="">
+      <form method="POST" data-netlify="true">
+    <input style="width: 70%;height: 100px;" type="textbox" name="result" id="textinput"></form>
 </p>
 
 
@@ -179,38 +184,6 @@ transition-duration: 0.4s;" class="button2">Share Audio  <i class="fa fa-microph
 <br><br><br>
   <button class="cta" onclick="plusSlides(1)">
 
-    <span>Next</span>
-  <svg width="15px" height="10px" viewBox="0 0 13 10">
-    <path d="M1,5 L11,5"></path>
-    <polyline points="8 1 12 5 8 9"></polyline>
-  </svg>
-</button>
-</div>
-
-<div class="mySlides">
-  <p>How could "App Name" be improved to better meet your needs?</p>
-  <p style="color:#b1dae7 ;">
-    This will help us improve your experience
-  </p>
-  <p>
-    <input style="width: 70%;height: 100px;" type="textbox" name="" id="">
-</p>
-
-<button style="display: block; margin-left: 18.6rem; border: none;
-color: black;
-padding: 15px 32px;
-text-align: left;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
--webkit-transition-duration: 0.4s; /* Safari */
-transition-duration: 0.4s;" class="button2">Share Audio  <i class="fa fa-microphone"></i></button>
-<br><br>
-
-  <button class="cta" onclick="plusSlides(1)">
-
     <span>Finish</span>
   <svg width="15px" height="10px" viewBox="0 0 13 10">
     <path d="M1,5 L11,5"></path>
@@ -218,8 +191,6 @@ transition-duration: 0.4s;" class="button2">Share Audio  <i class="fa fa-microph
   </svg>
 </button>
 </div>
-
-
 <hr style="background-color:black; color:black">
 
 
@@ -228,7 +199,6 @@ transition-duration: 0.4s;" class="button2">Share Audio  <i class="fa fa-microph
 
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
 <script>
